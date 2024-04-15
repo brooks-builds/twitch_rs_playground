@@ -79,7 +79,139 @@ impl WebsocketClient {
                         Event::ChannelPointsCustomRewardAddV1(reward) => {
                             println!("channel point redeemed: {:?}", reward.message)
                         }
-                        _ => (),
+                        Event::ChannelCharityCampaignDonateV1(reward) => println!(
+                            "Event::ChannelCharityCampaignDonateV1: {:?}",
+                            reward.message
+                        ),
+                        Event::ChannelCharityCampaignProgressV1(reward) => println!(
+                            "Event::ChannelCharityCampaignProgressV1: {:?}",
+                            reward.message
+                        ),
+                        Event::ChannelCharityCampaignStartV1(reward) => {
+                            println!("Event::ChannelCharityCampaignStartV1: {:?}", reward.message)
+                        }
+                        Event::ChannelCharityCampaignStopV1(reward) => {
+                            println!("Event::ChannelCharityCampaignStopV1: {:?}", reward.message)
+                        }
+                        Event::ChannelUpdateV1(reward) => {
+                            println!("Event::ChannelUpdateV1: {:?}", reward.message)
+                        }
+                        Event::ChannelUpdateV2(reward) => {
+                            println!("Event::ChannelUpdateV2: {:?}", reward.message)
+                        }
+                        Event::ChannelFollowV1(reward) => {
+                            println!("Event::ChannelFollowV1: {:?}", reward.message)
+                        }
+                        Event::ChannelFollowV2(reward) => {
+                            println!("Event::ChannelFollowV2: {:?}", reward.message)
+                        }
+                        Event::ChannelSubscribeV1(reward) => {
+                            println!("Event::ChannelSubscribeV1: {:?}", reward.message)
+                        }
+                        Event::ChannelCheerV1(reward) => {
+                            println!("Event::ChannelCheerV1: {:?}", reward.message)
+                        }
+                        Event::ChannelBanV1(reward) => {
+                            println!("Event::ChannelBanV1: {:?}", reward.message)
+                        }
+                        Event::ChannelUnbanV1(reward) => {
+                            println!("Event::ChannelUnbanV1: {:?}", reward.message)
+                        }
+                        Event::ChannelPointsCustomRewardUpdateV1(reward) => println!(
+                            "Event::ChannelPointsCustomRewardUpdateV1: {:?}",
+                            reward.message
+                        ),
+                        Event::ChannelPointsCustomRewardRemoveV1(reward) => println!(
+                            "Event::ChannelPointsCustomRewardRemoveV1: {:?}",
+                            reward.message
+                        ),
+                        Event::ChannelPointsCustomRewardRedemptionAddV1(reward) => println!(
+                            "Event::ChannelPointsCustomRewardRedemptionAddV1: {:?}",
+                            reward.message
+                        ),
+                        Event::ChannelPointsCustomRewardRedemptionUpdateV1(reward) => println!(
+                            "Event::ChannelPointsCustomRewardRedemptionUpdateV1: {:?}",
+                            reward.message
+                        ),
+                        Event::ChannelPollBeginV1(reward) => {
+                            println!("Event::ChannelPollBeginV1: {:?}", reward.message)
+                        }
+                        Event::ChannelPollProgressV1(reward) => {
+                            println!("Event::ChannelPollProgressV1: {:?}", reward.message)
+                        }
+                        Event::ChannelPollEndV1(reward) => {
+                            println!("Event::ChannelPollEndV1: {:?}", reward.message)
+                        }
+                        Event::ChannelPredictionBeginV1(reward) => {
+                            println!("Event::ChannelPredictionBeginV1: {:?}", reward.message)
+                        }
+                        Event::ChannelPredictionProgressV1(reward) => {
+                            println!("Event::ChannelPredictionProgressV1: {:?}", reward.message)
+                        }
+                        Event::ChannelPredictionLockV1(reward) => {
+                            println!("Event::ChannelPredictionLockV1: {:?}", reward.message)
+                        }
+                        Event::ChannelPredictionEndV1(reward) => {
+                            println!("Event::ChannelPredictionEndV1: {:?}", reward.message)
+                        }
+                        Event::ChannelRaidV1(reward) => {
+                            println!("Event::ChannelRaidV1: {:?}", reward.message)
+                        }
+                        Event::ChannelShieldModeBeginV1(reward) => {
+                            println!("Event::ChannelShieldModeBeginV1: {:?}", reward.message)
+                        }
+                        Event::ChannelShieldModeEndV1(reward) => {
+                            println!("Event::ChannelShieldModeEndV1: {:?}", reward.message)
+                        }
+                        Event::ChannelShoutoutCreateV1(reward) => {
+                            println!("Event::ChannelShoutoutCreateV1: {:?}", reward.message)
+                        }
+                        Event::ChannelShoutoutReceiveV1(reward) => {
+                            println!("Event::ChannelShoutoutReceiveV1: {:?}", reward.message)
+                        }
+                        Event::ChannelGoalBeginV1(reward) => {
+                            println!("Event::ChannelGoalBeginV1: {:?}", reward.message)
+                        }
+                        Event::ChannelGoalProgressV1(reward) => {
+                            println!("Event::ChannelGoalProgressV1: {:?}", reward.message)
+                        }
+                        Event::ChannelGoalEndV1(reward) => {
+                            println!("Event::ChannelGoalEndV1: {:?}", reward.message)
+                        }
+                        Event::ChannelHypeTrainBeginV1(reward) => {
+                            println!("Event::ChannelHypeTrainBeginV1: {:?}", reward.message)
+                        }
+                        Event::ChannelHypeTrainProgressV1(reward) => {
+                            println!("Event::ChannelHypeTrainProgressV1: {:?}", reward.message)
+                        }
+                        Event::ChannelHypeTrainEndV1(reward) => {
+                            println!("Event::ChannelHypeTrainEndV1: {:?}", reward.message)
+                        }
+                        Event::StreamOnlineV1(reward) => {
+                            println!("Event::StreamOnlineV1: {:?}", reward.message)
+                        }
+                        Event::StreamOfflineV1(reward) => {
+                            println!("Event::StreamOfflineV1: {:?}", reward.message)
+                        }
+                        Event::UserUpdateV1(reward) => {
+                            println!("Event::UserUpdateV1: {:?}", reward.message)
+                        }
+                        Event::UserAuthorizationGrantV1(reward) => {
+                            println!("Event::UserAuthorizationGrantV1: {:?}", reward.message)
+                        }
+                        Event::UserAuthorizationRevokeV1(reward) => {
+                            println!("Event::UserAuthorizationRevokeV1: {:?}", reward.message)
+                        }
+                        Event::ChannelSubscriptionEndV1(reward) => {
+                            println!("Event::ChannelSubscriptionEndV1: {:?}", reward.message)
+                        }
+                        Event::ChannelSubscriptionGiftV1(reward) => {
+                            println!("Event::ChannelSubscriptionGiftV1: {:?}", reward.message)
+                        }
+                        Event::ChannelSubscriptionMessageV1(reward) => {
+                            println!("Event::ChannelSubscriptionMessageV1: {:?}", reward.message)
+                        }
+                        _ => unreachable!(),
                     }
                 }
                 twitch_api::eventsub::EventsubWebsocketData::Revocation { metadata, payload } => {
@@ -111,7 +243,7 @@ impl WebsocketClient {
 
         helix_client
             .create_eventsub_subscription(
-                eventsub::channel::ChannelPointsCustomRewardAddV1::broadcaster_user_id(
+                eventsub::channel::ChannelPointsCustomRewardRedemptionAddV1::broadcaster_user_id(
                     user.id.clone(),
                 ),
                 transport.clone(),
